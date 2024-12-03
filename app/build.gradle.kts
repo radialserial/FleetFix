@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.hinade.fleetfix"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.hinade.fleetfix"
