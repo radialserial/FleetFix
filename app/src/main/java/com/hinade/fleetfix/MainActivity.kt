@@ -15,16 +15,16 @@ class MainActivity : AppCompatActivity() {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_main)
 
-            val usernameEditText = findViewById<EditText>(R.id.usernameEditText)
-            val passwordEditText = findViewById<EditText>(R.id.passwordEditText)
-            val loginButton = findViewById<Button>(R.id.loginButton)
-            val registerButton = findViewById<Button>(R.id.registerButton)
+            val nomeEditText = findViewById<EditText>(R.id.nomeEditText)
+            val senhaEditText = findViewById<EditText>(R.id.senhaEditText)
+            val login = findViewById<Button>(R.id.login)
+            val cadastrar = findViewById<Button>(R.id.cadastrar)
 
-            loginButton.setOnClickListener {
-                val username = usernameEditText.text.toString()
-                val password = passwordEditText.text.toString()
+            login.setOnClickListener {
+                val nome = nomeEditText.text.toString()
+                val senha = senhaEditText.text.toString()
 
-                if (username.isEmpty() || password.isEmpty()) {
+                if (nome.isEmpty() || senha.isEmpty()) {
                     Toast.makeText(this, "Preencha todos os campos!", Toast.LENGTH_SHORT).show()
                 } else {
 
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-            registerButton.setOnClickListener {
+            cadastrar.setOnClickListener {
 
                 Toast.makeText(this, "Tela de cadastro em desenvolvimento", Toast.LENGTH_SHORT).show()
             }
