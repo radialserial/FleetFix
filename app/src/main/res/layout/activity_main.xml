@@ -21,7 +21,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/usernameEditText"
+        android:id="@+id/nomeEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Usuário"
@@ -35,7 +35,7 @@
         android:layout_marginHorizontal="32dp" />
 
     <EditText
-        android:id="@+id/passwordEditText"
+        android:id="@+id/senhaEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Senha"
@@ -43,13 +43,13 @@
         android:background="@drawable/edit_text_background"
         android:layout_marginTop="16dp"
         android:padding="12dp"
-        app:layout_constraintTop_toBottomOf="@id/usernameEditText"
+        app:layout_constraintTop_toBottomOf="@id/nomeEditText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginHorizontal="32dp" />
 
     <Button
-        android:id="@+id/loginButton"
+        android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -58,12 +58,12 @@
         android:backgroundTint="#6A457F"
         android:elevation="4dp"
         android:paddingHorizontal="24dp"
-        app:layout_constraintTop_toBottomOf="@id/passwordEditText"
+        app:layout_constraintTop_toBottomOf="@id/senhaEditText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/registerButton"
+        android:id="@+id/cadastrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -71,7 +71,7 @@
         android:textColor="#6A457F"
         android:backgroundTint="@android:color/transparent"
         android:elevation="0dp"
-        app:layout_constraintTop_toBottomOf="@id/loginButton"
+        app:layout_constraintTop_toBottomOf="@id/login"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
