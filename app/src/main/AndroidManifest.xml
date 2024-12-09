@@ -13,13 +13,13 @@
         android:theme="@style/Theme.FleetFix"
         tools:targetApi="31">
         <activity
-            android:name=".MecanicoActivity"
+            android:name=".view.activity.MecanicoActivity"
             android:exported="false" />
         <activity
-            android:name=".MotoristaActivity"
+            android:name=".view.activity.MotoristaActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".view.activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
