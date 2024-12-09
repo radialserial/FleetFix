@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.hinade.fleetfix.R
 import com.hinade.fleetfix.databinding.FragmentCadastroBinding
+import com.hinade.fleetfix.model.TipoUsuario
 
 /**
  * Um fragmento representando a tela de cadastro.
@@ -26,7 +27,8 @@ class CadastroFragment : Fragment() {
 
         with(binding) {
 
-            val tiposUsuario = resources.getStringArray(R.array.usar_types)
+            val tiposUsuario =
+                listOf("Tipo de usuário").plus(TipoUsuario.entries.map { it.nome })
             val adapter = ArrayAdapter(
                 requireContext(),
                 android.R.layout.simple_spinner_dropdown_item,
@@ -51,6 +53,14 @@ class CadastroFragment : Fragment() {
                         "As senhas não coincidem!",
                         Toast.LENGTH_SHORT
                     ).show()
+                } else if (
+                    TipoUsuario.from(tipoUsuarioSpinner.selectedItem.toString()) == null
+                ) {
+                    Toast.makeText(
+                        requireContext(),
+                        "Escolha um usuário.",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 } else {
                     Toast.makeText(
                         requireContext(),
@@ -60,10 +70,8 @@ class CadastroFragment : Fragment() {
                     findNavController().navigate(R.id.action_cadastroFragment_to_loginFragment)
                 }
             }
-
         }
 
         return binding.root
     }
-
 }
