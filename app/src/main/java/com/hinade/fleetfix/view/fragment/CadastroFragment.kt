@@ -42,36 +42,28 @@ class CadastroFragment : Fragment() {
                     senhaEditText.text.isBlank() ||
                     repetirSenhaEditText.text.isBlank()
                 ) {
-                    Toast.makeText(
-                        requireContext(),
-                        "Preencha todos os campos!",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    notificar("Preencha todos os campos!")
                 } else if (senhaEditText.text.toString() != repetirSenhaEditText.text.toString()) {
-                    Toast.makeText(
-                        requireContext(),
-                        "As senhas não coincidem!",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    notificar("As senhas não coincidem!")
                 } else if (
                     TipoUsuario.from(tipoUsuarioSpinner.selectedItem.toString()) == null
                 ) {
-                    Toast.makeText(
-                        requireContext(),
-                        "Escolha um usuário.",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    notificar("Escolha um usuário.")
                 } else {
-                    Toast.makeText(
-                        requireContext(),
-                        "Cadastro realizado com sucesso!",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    notificar("Cadastro realizado com sucesso!")
                     findNavController().navigate(R.id.action_cadastroFragment_to_loginFragment)
                 }
             }
         }
 
         return binding.root
+    }
+
+    private fun notificar(mensagem: String) {
+        Toast.makeText(
+            requireContext(),
+            mensagem,
+            Toast.LENGTH_SHORT
+        ).show()
     }
 }
