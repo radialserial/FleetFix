@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FAF4FF"
-    tools:context=".MainActivity">
+    tools:context=".CadastroActivity">
 
 
     <TextView
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="FleetFix"
+        android:text="Cadastro"
         android:textSize="32sp"
         android:textColor="#000000"
         android:layout_marginTop="64dp"
@@ -33,16 +33,13 @@
         app:layout_constraintTop_toBottomOf="@id/titleText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         android:layout_marginHorizontal="32dp" />
 
 
-    <EditText
-        android:id="@+id/senhaEditText"
+    <Spinner
+        android:id="@+id/usarTypeSpinner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Senha"
-        android:inputType="textPassword"
         android:background="@drawable/edit_text_background"
         android:layout_marginTop="16dp"
         android:padding="12dp"
@@ -52,33 +49,48 @@
         android:layout_marginHorizontal="32dp" />
 
 
-    <Button
-        android:id="@+id/login"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/senhaEditText"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Login"
-        android:textColor="#FFFFFF"
-        android:backgroundTint="#6A457F"
-        android:elevation="4dp"
-        android:paddingHorizontal="24dp"
+        android:hint="Senha"
+        android:inputType=""
+        android:background="@drawable/edit_text_background"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/usarTypeSpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="32dp" />
+
+
+    <EditText
+        android:id="@+id/repetirSenhaEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Repetir Senha"
+        android:inputType="textPassword"
+        android:background="@drawable/edit_text_background"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"
         app:layout_constraintTop_toBottomOf="@id/senhaEditText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="32dp" />
 
 
     <Button
         android:id="@+id/cadastrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:text="Cadastrar"
-        android:textColor="#6A457F"
-        android:backgroundTint="@android:color/transparent"
-        android:elevation="0dp"
-        app:layout_constraintTop_toBottomOf="@id/login"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#6A457F"
+        android:elevation="4dp"
+        android:paddingHorizontal="24dp"
+        app:layout_constraintTop_toBottomOf="@id/repetirSenhaEditText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-

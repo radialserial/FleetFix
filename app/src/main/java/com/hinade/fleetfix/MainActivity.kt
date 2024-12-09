@@ -1,5 +1,6 @@
 package com.hinade.fleetfix
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -11,31 +12,33 @@ import androidx.core.view.WindowInsetsCompat
 
 
 class MainActivity : AppCompatActivity() {
-            override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-            setContentView(R.layout.activity_main)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-            val usernameEditText = findViewById<EditText>(R.id.usernameEditText)
-            val passwordEditText = findViewById<EditText>(R.id.passwordEditText)
-            val loginButton = findViewById<Button>(R.id.loginButton)
-            val registerButton = findViewById<Button>(R.id.registerButton)
+        val nomeEditText = findViewById<EditText>(R.id.nomeEditText)
+        val senhaEditText = findViewById<EditText>(R.id.senhaEditText)
+        val login = findViewById<Button>(R.id.login)
+        val cadastrar = findViewById<Button>(R.id.cadastrar)
 
-            loginButton.setOnClickListener {
-                val username = usernameEditText.text.toString()
-                val password = passwordEditText.text.toString()
+        login.setOnClickListener {
+            val nome = nomeEditText.text.toString()
+            val senha = senhaEditText.text.toString()
 
-                if (username.isEmpty() || password.isEmpty()) {
-                    Toast.makeText(this, "Preencha todos os campos!", Toast.LENGTH_SHORT).show()
-                } else {
+            if (nome.isEmpty() || senha.isEmpty()) {
+                Toast.makeText(this, "Preencha todos os campos!", Toast.LENGTH_SHORT).show()
+            } else {
 
-                    Toast.makeText(this, "Login realizado com sucesso!", Toast.LENGTH_SHORT).show()
-                }
-            }
-
-            registerButton.setOnClickListener {
-
-                Toast.makeText(this, "Tela de cadastro em desenvolvimento", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Login realizado com sucesso!", Toast.LENGTH_SHORT).show()
             }
         }
+
+        cadastrar.setOnClickListener {
+
+            val intent = Intent(this, CadastroActivity::class.java)
+            startActivity(intent)
+
+        }
     }
+}
 

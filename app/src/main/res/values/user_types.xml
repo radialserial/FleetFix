@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="usar_types">
+        <item>Motorista</item>
+        <item>Mecanico</item>
+        <item>Visitante</item>
+    </string-array>
+
+</resources>
