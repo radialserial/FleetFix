@@ -16,6 +16,9 @@
             android:name=".MecanicoActivity"
             android:exported="false" />
         <activity
+            android:name=".MotoristaActivity"
+            android:exported="false" />
+        <activity
             android:name=".CadastroActivity"
             android:exported="false" />
         <activity
