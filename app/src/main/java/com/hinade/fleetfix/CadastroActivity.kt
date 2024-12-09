@@ -1,5 +1,6 @@
 package com.hinade.fleetfix
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -21,14 +22,14 @@ class CadastroActivity : AppCompatActivity() {
         val senhaEditText = findViewById<EditText>(R.id.senhaEditText)
         val repetirSenhaEditText = findViewById<EditText>(R.id.repetirSenhaEditText)
         val usarTypeSpinner = findViewById<Spinner>(R.id.usarTypeSpinner)
-        val registrar = findViewById<Button>(R.id.registrar)
+        val cadastrar = findViewById<Button>(R.id.cadastrar)
 
 
-        val userTypes = resources.getStringArray(R.array.user_types)
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, userTypes)
+        val usarTypes = resources.getStringArray(R.array.usar_types)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, usarTypes)
         usarTypeSpinner.adapter = adapter
 
-        registrar.setOnClickListener {
+        cadastrar.setOnClickListener {
             val nome = nomeEditText.text.toString()
             val senha = senhaEditText.text.toString()
             val repetirSenha = repetirSenhaEditText.text.toString()
@@ -41,6 +42,10 @@ class CadastroActivity : AppCompatActivity() {
             } else {
 
                 Toast.makeText(this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+
+
             }
         }
     }
