@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">FleetFix</string>
+    <string name="fleetfix">FleetFix</string>
+    <string name="usuario">Usuário</string>
+    <string name="senha">Senha</string>
+    <string name="login">Login</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="cadastro">Cadastro</string>
+    <string name="repetir_senha">Repetir senha</string>
 </resources>
