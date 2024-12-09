@@ -37,14 +37,14 @@ class CadastroFragment : Fragment() {
                 if (
                     usuarioEditText.text.isBlank() ||
                     senhaEditText.text.isBlank() ||
-                    repetirSenhaEditText.text.isEmpty()
+                    repetirSenhaEditText.text.isBlank()
                 ) {
                     Toast.makeText(
                         requireContext(),
                         "Preencha todos os campos!",
                         Toast.LENGTH_SHORT
                     ).show()
-                } else if (senhaEditText.text != repetirSenhaEditText.text) {
+                } else if (senhaEditText.text.toString() != repetirSenhaEditText.text.toString()) {
                     Toast.makeText(
                         requireContext(),
                         "As senhas não coincidem!",
