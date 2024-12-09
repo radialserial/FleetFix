@@ -5,4 +5,6 @@
     <string name="senha">Senha</string>
     <string name="login">Login</string>
     <string name="cadastrar">Cadastrar</string>
+    <string name="cadastro">Cadastro</string>
+    <string name="repetir_senha">Repetir senha</string>
 </resources>

@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.hinade.fleetfix.databinding.FragmentLoginBinding
 
 /**
@@ -22,6 +23,7 @@ class LoginFragment : Fragment() {
         binding = FragmentLoginBinding.inflate(layoutInflater)
 
         with(binding) {
+
             loginButton.setOnClickListener {
                 if (usuarioEditText.text.isBlank() || senhaEditText.text.isBlank()) {
                     Toast.makeText(
@@ -37,6 +39,11 @@ class LoginFragment : Fragment() {
                     ).show()
                 }
             }
+
+            cadastroButton.setOnClickListener {
+                findNavController().navigate(R.id.action_loginFragment_to_cadastroFragment)
+            }
+
         }
 
         return binding.root
