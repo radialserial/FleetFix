@@ -56,4 +56,7 @@ dependencies {
     //noinspection KaptUsageInsteadOfKsp
     kapt(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
+
+    // ViewModel scope
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
 }

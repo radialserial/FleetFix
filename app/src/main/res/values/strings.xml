@@ -7,4 +7,6 @@
     <string name="cadastrar">Cadastrar</string>
     <string name="cadastro">Cadastro</string>
     <string name="repetir_senha">Repetir senha</string>
+    <string name="nome_completo">Nome completo</string>
+    <string name="telefone">Telefone</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.hinade.fleetfix.model
+package com.hinade.fleetfix.model.usuario
 
 enum class TipoUsuario(val nome: String) {
     MOTORISTA("Motorista"),
