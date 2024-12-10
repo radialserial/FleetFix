@@ -2,12 +2,11 @@ package com.hinade.fleetfix.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.viewModelScope
 import com.hinade.fleetfix.model.AppDatabase
 import com.hinade.fleetfix.model.usuario.Usuario
 import com.hinade.fleetfix.model.usuario.UsuarioRepository
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 /**
  * ViewModel que representa a conexão do
@@ -28,7 +27,8 @@ class CadastroViewModel(application: Application) : AndroidViewModel(application
     }
 
     fun insertUsuario(usuario: Usuario) {
-        viewModelScope.launch(Dispatchers.IO) {
+        // Bloqueado para jogar a possível exceção para fora
+        runBlocking(Dispatchers.IO) {
             usuarioRepository.insert(usuario)
         }
     }
