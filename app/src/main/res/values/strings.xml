@@ -16,4 +16,5 @@
     <string name="adicionar">Adicionar</string>
     <string name="veiculos">Veículos</string>
     <string name="nenhum_veiculo_cadastrado">Nenhum veículo cadastrado.</string>
+    <string name="simbolo_de_adicao">Símbolo de adição</string>
 </resources>
