@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/dataTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[dd/mm/aaaa]"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/descricaoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descrição do serviço"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/mecanicoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="por [mecânico que realizou]"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+</LinearLayout>
