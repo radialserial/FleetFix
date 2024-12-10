@@ -12,7 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="#F4EFFA"
-        android:title="Adicionar veículo"
+        android:title="@string/adicionar_veiculo"
         android:titleTextColor="#000"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Placa" />
+            android:hint="@string/placa" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Campo Ano de Fabricação -->
@@ -49,7 +49,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ano fab." />
+            android:hint="@string/ano_fab" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Campo Valor IPVA -->
@@ -66,7 +66,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Valor IPVA" />
+            android:hint="@string/valor_ipva" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Botão Adicionar -->
@@ -76,8 +76,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:backgroundTint="#6A457F"
-        android:text="Adicionar"
         android:textColor="#FFFFFF"
+        android:text="@string/adicionar"
         app:layout_constraintTop_toBottomOf="@id/inputValorIpva"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

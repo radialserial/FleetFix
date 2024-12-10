@@ -9,4 +9,11 @@
     <string name="repetir_senha">Repetir senha</string>
     <string name="nome_completo">Nome completo</string>
     <string name="telefone">Telefone</string>
+    <string name="adicionar_veiculo">Adicionar veículo</string>
+    <string name="placa">Placa</string>
+    <string name="ano_fab">Ano fab.</string>
+    <string name="valor_ipva">Valor IPVA</string>
+    <string name="adicionar">Adicionar</string>
+    <string name="veiculos">Veículos</string>
+    <string name="nenhum_veiculo_cadastrado">Nenhum veículo cadastrado.</string>
 </resources>
