@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragment.motorista.AdicionarVeiculoFragment">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarAdicionar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#F4EFFA"
+        android:title="@string/adicionar_veiculo"
+        android:titleTextColor="#000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Campo Placa -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputPlaca"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbarAdicionar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/placa" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Campo Ano de Fabricação -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputAnoFabricacao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/inputPlaca"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ano_fab" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Campo Valor IPVA -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputValorIpva"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/inputAnoFabricacao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/valor_ipva" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Botão Adicionar -->
+    <Button
+        android:id="@+id/btnAdicionarVeiculo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:text="@string/adicionar"
+        android:textColor="@color/design_default_color_on_primary"
+        app:layout_constraintTop_toBottomOf="@id/inputValorIpva"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
