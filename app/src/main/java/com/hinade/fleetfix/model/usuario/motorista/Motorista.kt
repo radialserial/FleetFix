@@ -12,11 +12,13 @@ data class Motorista(
     override val nome: String,
     override val login: String,
     override val senha: String,
+    override val senhaSalt: String,
     override val telefone: String
 ) : Usuario(
     nome,
     login,
     senha,
+    senhaSalt,
     telefone,
     TipoUsuario.MOTORISTA
 )

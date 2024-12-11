@@ -17,6 +17,20 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_loginFragment_to_mecanicoActivity"
+            app:destination="@id/mecanicoActivity"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_loginFragment_to_motoristaActivity"
+            app:destination="@id/motoristaActivity"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/cadastroFragment"
@@ -31,4 +45,14 @@
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
+    <activity
+        android:id="@+id/mecanicoActivity"
+        android:name="com.hinade.fleetfix.view.activity.MecanicoActivity"
+        android:label="activity_mecanico"
+        tools:layout="@layout/activity_mecanico" />
+    <activity
+        android:id="@+id/motoristaActivity"
+        android:name="com.hinade.fleetfix.view.activity.MotoristaActivity"
+        android:label="activity_motorista"
+        tools:layout="@layout/activity_motorista" />
 </navigation>

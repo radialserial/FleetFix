@@ -56,6 +56,7 @@ class CadastroFragment : Fragment() {
                                 nome,
                                 login,
                                 senha,
+                                null,
                                 telefone,
                                 TipoUsuario.from(tipoUsuario)!!
                             )
