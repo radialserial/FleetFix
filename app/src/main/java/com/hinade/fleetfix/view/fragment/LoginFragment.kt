@@ -6,9 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.hinade.fleetfix.R
 import com.hinade.fleetfix.databinding.FragmentLoginBinding
+import com.hinade.fleetfix.viewmodel.LoginViewModel
 
 /**
  * Um fragmento representando a tela de login.
@@ -16,6 +18,7 @@ import com.hinade.fleetfix.databinding.FragmentLoginBinding
 class LoginFragment : Fragment() {
 
     private lateinit var binding: FragmentLoginBinding
+    private val loginViewModel by viewModels<LoginViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,18 +29,15 @@ class LoginFragment : Fragment() {
         with(binding) {
 
             loginButton.setOnClickListener {
-                if (usuarioEditText.text.isBlank() || senhaEditText.text.isBlank()) {
-                    Toast.makeText(
-                        requireContext(),
-                        "Preencha todos os campos!",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                } else {
-                    Toast.makeText(
-                        requireContext(),
-                        "Login realizado com sucesso!",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                if (camposEstaoValidos()) {
+                    val login = loginEditText.text.toString()
+                    val senha = senhaEditText.text.toString()
+
+                    if (loginViewModel.validarLogin(login, senha)) {
+                        notificar("Login realizado com sucesso!")
+                    } else {
+                        notificar("Dados incorretos.")
+                    }
                 }
             }
 
@@ -49,4 +49,22 @@ class LoginFragment : Fragment() {
 
         return binding.root
     }
+
+    private fun FragmentLoginBinding.camposEstaoValidos(): Boolean {
+        if (loginEditText.text.isBlank() || senhaEditText.text.isBlank()) {
+            notificar("Preencha todos os campos!")
+            return false
+        }
+
+        return true
+    }
+
+    private fun notificar(mensagem: String) {
+        Toast.makeText(
+            requireContext(),
+            mensagem,
+            Toast.LENGTH_SHORT
+        ).show()
+    }
+
 }
