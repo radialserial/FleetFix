@@ -14,4 +14,10 @@ interface MotoristaDao {
     @Query("SELECT EXISTS (SELECT * from motorista WHERE login=:motoristaLogin)")
     suspend fun exists(motoristaLogin: String): Boolean
 
+    @Query("SELECT senhaSalt FROM motorista WHERE login = :login")
+    fun getSenhaSaltByLogin(login: String): String?
+
+    @Query("SELECT EXISTS(SELECT * FROM motorista WHERE login = :login AND senha = :senhaCriptografada)")
+    fun checarSenhaValida(login: String, senhaCriptografada: String): Boolean
+
 }

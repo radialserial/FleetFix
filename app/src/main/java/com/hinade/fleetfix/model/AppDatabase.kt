@@ -14,7 +14,7 @@ import com.hinade.fleetfix.model.usuario.motorista.MotoristaDao
         Mecanico::class,
         Motorista::class,
     ],
-    version = 1,
+    version = 2,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
