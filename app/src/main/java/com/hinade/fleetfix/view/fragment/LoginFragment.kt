@@ -10,6 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.hinade.fleetfix.R
 import com.hinade.fleetfix.databinding.FragmentLoginBinding
+import com.hinade.fleetfix.model.usuario.TipoUsuario
 import com.hinade.fleetfix.viewmodel.LoginViewModel
 
 /**
@@ -33,10 +34,20 @@ class LoginFragment : Fragment() {
                     val login = loginEditText.text.toString()
                     val senha = senhaEditText.text.toString()
 
-                    if (loginViewModel.validarLogin(login, senha)) {
-                        notificar("Login realizado com sucesso!")
-                    } else {
-                        notificar("Dados incorretos.")
+                    val tipoUsuario = loginViewModel.determinarLogin(login, senha)
+
+                    when (tipoUsuario) {
+                        TipoUsuario.MOTORISTA -> {
+                            findNavController().navigate(R.id.action_loginFragment_to_motoristaActivity)
+                        }
+
+                        TipoUsuario.MECANICO -> {
+                            findNavController().navigate(R.id.action_loginFragment_to_mecanicoActivity)
+                        }
+
+                        else -> {
+                            notificar("Dados incorretos.")
+                        }
                     }
                 }
             }

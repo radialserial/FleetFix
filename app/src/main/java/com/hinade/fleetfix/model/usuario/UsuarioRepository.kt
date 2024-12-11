@@ -62,21 +62,36 @@ class UsuarioRepository(
 
     }
 
-    fun validarLogin(login: String, senha: String): Boolean {
-        var tipoUsuario: TipoUsuario
+    fun determinarLogin(login: String, senha: String): TipoUsuario? {
+        var tipoUsuario: TipoUsuario?
 
         val saltSenha =
             mecanicoDao.getSenhaSaltByLogin(login)
                 .also { tipoUsuario = TipoUsuario.MECANICO }
                 ?: motoristaDao.getSenhaSaltByLogin(login)
-                    .also { tipoUsuario = TipoUsuario.MOTORISTA } ?: return false
+                    .also { tipoUsuario = TipoUsuario.MOTORISTA } ?: return null
 
         val senhaCriptografada = Utils.getSenhaCriptografada(senha, saltSenha)
 
-        return if (tipoUsuario == TipoUsuario.MECANICO) {
-            mecanicoDao.checarSenhaValida(login, senhaCriptografada)
-        } else {
-            motoristaDao.checarSenhaValida(login, senhaCriptografada)
+        when (tipoUsuario) {
+            TipoUsuario.MECANICO -> {
+                if (mecanicoDao.checarSenhaValida(login, senhaCriptografada)) {
+                    return TipoUsuario.MECANICO
+                }
+                return null
+            }
+
+            TipoUsuario.MOTORISTA -> {
+                if (motoristaDao.checarSenhaValida(login, senhaCriptografada)) {
+                    return TipoUsuario.MOTORISTA
+                }
+                return null
+            }
+
+            else -> {
+                return null
+            }
         }
     }
+
 }

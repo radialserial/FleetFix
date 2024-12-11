@@ -3,6 +3,7 @@ package com.hinade.fleetfix.viewmodel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import com.hinade.fleetfix.model.AppDatabase
+import com.hinade.fleetfix.model.usuario.TipoUsuario
 import com.hinade.fleetfix.model.usuario.UsuarioRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
@@ -25,9 +26,9 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
         usuarioRepository = UsuarioRepository(motoristaDao, mecanicoDao)
     }
 
-    fun validarLogin(login: String, senha: String): Boolean {
+    fun determinarLogin(login: String, senha: String): TipoUsuario? {
         return runBlocking(Dispatchers.IO) {
-            usuarioRepository.validarLogin(login, senha)
+            usuarioRepository.determinarLogin(login, senha)
         }
     }
 
