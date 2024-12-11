@@ -3,32 +3,89 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/adicionarMulta">
 
     <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.hinade.fleetfix.view.fragment.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login">
+        android:id="@+id/adicionarMulta"
+        android:name="com.hinade.fleetfix.AdicionarMultaFragment"
+        android:label="fragment_adicionar_multa"
+        tools:layout="@layout/fragment_adicionar_multa">
         <action
-            android:id="@+id/action_loginFragment_to_cadastroFragment"
-            app:destination="@id/cadastroFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            android:id="@+id/action_adicionarMulta_to_multasFragment"
+            app:destination="@id/multasFragment" />
+        <action
+            android:id="@+id/action_adicionarMulta_to_multasFragment2"
+            app:destination="@id/multasFragment" />
     </fragment>
     <fragment
-        android:id="@+id/cadastroFragment"
-        android:name="com.hinade.fleetfix.view.fragment.CadastroFragment"
-        android:label="fragment_cadastro"
-        tools:layout="@layout/fragment_cadastro">
+        android:id="@+id/multasFragment"
+        android:name="com.hinade.fleetfix.MultasFragment"
+        android:label="fragment_multas"
+        tools:layout="@layout/fragment_multas" />
+    <fragment
+        android:id="@+id/menuManutencaoM"
+        android:name="com.hinade.fleetfix.MenuManutencaoFragment"
+        android:label="fragment_menu_manutencao_m"
+        tools:layout="@layout/fragment_menu_manutencao_m">
         <action
-            android:id="@+id/action_cadastroFragment_to_loginFragment"
-            app:destination="@id/loginFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            android:id="@+id/action_menuManutencaoM_to_manutencaoM"
+            app:destination="@id/manutencaoM" />
+    </fragment>
+    <fragment
+        android:id="@+id/manutencaoM"
+        android:name="com.hinade.fleetfix.ManutencaoMecanicoFragment"
+        android:label="fragment_manutencao_m"
+        tools:layout="@layout/fragment_manutencao_mecanico">
+        <action
+            android:id="@+id/action_manutencaoM_to_menuManutencaoM"
+            app:destination="@id/menuManutencaoM" />
+        <action
+            android:id="@+id/action_manutencaoM_to_historicoServicoM"
+            app:destination="@id/historicoServicoM" />
+    </fragment>
+    <fragment
+        android:id="@+id/historicoServicoM"
+        android:name="com.hinade.fleetfix.HistoricoServicoFragment"
+        android:label="fragment_historico_servico_m"
+        tools:layout="@layout/fragment_historico_servico">
+        <action
+            android:id="@+id/action_historicoServicoM_to_manutencaoM"
+            app:destination="@id/manutencaoM" />
+        <action
+            android:id="@+id/action_historicoServicoM_to_pedidoManutencaoM"
+            app:destination="@id/pedidoManutencaoM" />
+    </fragment>
+    <fragment
+        android:id="@+id/pedidoManutencaoM"
+        android:name="com.hinade.fleetfix.PedidoManutencaoFragment"
+        android:label="fragment_pedido_manutencao_m"
+        tools:layout="@layout/fragment_pedido_manutencao">
+        <action
+            android:id="@+id/action_pedidoManutencaoM_to_historicoServicoM"
+            app:destination="@id/historicoServicoM" />
+        <action
+            android:id="@+id/action_pedidoManutencaoM_to_servicosMFragment"
+            app:destination="@id/servicosMFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/servicosMFragment"
+        android:name="com.hinade.fleetfix.ServicosFragment"
+        android:label="fragment_servicos_m"
+        tools:layout="@layout/fragment_servicos">
+        <action
+            android:id="@+id/action_servicosMFragment_to_pedidoManutencaoM"
+            app:destination="@id/pedidoManutencaoM" />
+        <action
+            android:id="@+id/action_servicosMFragment_to_novoServicoM"
+            app:destination="@id/novoServicoM" />
+    </fragment>
+    <fragment
+        android:id="@+id/novoServicoM"
+        android:name="com.hinade.fleetfix.NovoServicoFragment"
+        android:label="fragment_novo_servico_m"
+        tools:layout="@layout/fragment_novo_servico">
+        <action
+            android:id="@+id/action_novoServicoM_to_servicosMFragment"
+            app:destination="@id/servicosMFragment" />
     </fragment>
 </navigation>
