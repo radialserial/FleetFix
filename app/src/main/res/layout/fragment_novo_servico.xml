@@ -5,8 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#f9f5fc"
-    tools:context=".NovoServicoFragment">
+    tools:context=".view.fragment.mecanico.NovoServicoFragment">
 
 
     <EditText
@@ -24,7 +23,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Custo"
-        android:background="@drawable/edit_text_border"
         android:layout_marginTop="16dp"
         android:padding="8dp"
         android:inputType="numberDecimal"

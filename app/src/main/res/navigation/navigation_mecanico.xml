@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_mecanico"
+    app:startDestination="@id/manutencoesFragment">
+
+    <fragment
+        android:id="@+id/pedidoManutencaoFragment"
+        android:name="com.hinade.fleetfix.view.fragment.mecanico.PedidoManutencaoFragment"
+        android:label="PedidoManutencaoFragment"
+        tools:layout="@layout/fragment_pedido_manutencao">
+        <action
+            android:id="@+id/action_pedidoManutencaoFragment_to_servicosVeiculoFragment"
+            app:destination="@id/servicosVeiculoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_pedidoManutencaoFragment_to_historicoServicoFragment"
+            app:destination="@id/historicoServicoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/manutencoesFragment"
+        android:name="com.hinade.fleetfix.view.fragment.mecanico.ManutencaoFragment"
+        android:label="fragment_manutencoes_mecanico"
+        tools:layout="@layout/fragment_manutencoes_mecanico">
+        <action
+            android:id="@+id/action_manutencoesFragment_to_pedidoManutencaoFragment"
+            app:destination="@id/pedidoManutencaoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/novoServicoFragment"
+        android:name="com.hinade.fleetfix.view.fragment.mecanico.NovoServicoFragment"
+        android:label="fragment_novo_servico"
+        tools:layout="@layout/fragment_novo_servico">
+        <action
+            android:id="@+id/action_novoServicoFragment_to_servicosVeiculoFragment"
+            app:destination="@id/servicosVeiculoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/servicosVeiculoFragment"
+        android:name="com.hinade.fleetfix.view.fragment.mecanico.ServicosVeiculoFragment"
+        android:label="fragment_servicos_veiculo"
+        tools:layout="@layout/fragment_servicos_veiculo">
+        <action
+            android:id="@+id/action_servicosVeiculoFragment_to_novoServicoFragment"
+            app:destination="@id/novoServicoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/historicoServicoFragment"
+        android:name="com.hinade.fleetfix.view.fragment.mecanico.HistoricoServicoFragment"
+        android:label="fragment_historico_servico"
+        tools:layout="@layout/fragment_historico_servico" />
+</navigation>

@@ -5,16 +5,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#F8F4FF"
-    tools:context=".AdicionarMultaFragment">
+    tools:context=".view.fragment.motorista.AdicionarMultaFragment">
 
     <EditText
         android:id="@+id/dateEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Data"
+        android:hint="@string/data"
         android:drawableEnd="@drawable/ic_calendar"
-        android:background="@drawable/edit_text_background"
         android:padding="12dp"
         android:layout_marginBottom="16dp" />
 
@@ -22,8 +20,7 @@
         android:id="@+id/valueEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Valor"
-        android:background="@drawable/edit_text_background"
+        android:hint="@string/valor"
         android:padding="12dp"
         android:layout_marginBottom="16dp" />
 
@@ -31,9 +28,7 @@
         android:id="@+id/addButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Adicionar"
-        android:backgroundTint="#6A4C93"
-        android:textColor="#FFFFFF"
+        android:text="@string/adicionar"
         android:layout_gravity="center" />
 
 </LinearLayout>
