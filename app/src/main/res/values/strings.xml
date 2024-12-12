@@ -25,4 +25,6 @@
     <string name="historico_do_veiculo">Histórico do veículo</string>
     <string name="descreva_o_problema">Descreva o problema...</string>
     <string name="descricao_do_servico">Descrição do serviço</string>
+    <string name="abrir_menu">Abrir menu</string>
+    <string name="fechar_menu">Fechar menu</string>
 </resources>
