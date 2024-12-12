@@ -84,7 +84,7 @@
             android:paddingBottom="12dp"
             android:elevation="4dp"
             android:stateListAnimator="@android:anim/overshoot_interpolator"
-            android:cornerRadius="24dp" />
+            />
 
         <Button
             android:id="@+id/btnManutencoes"
@@ -100,7 +100,7 @@
             android:paddingBottom="12dp"
             android:elevation="4dp"
             android:stateListAnimator="@android:anim/overshoot_interpolator"
-            android:cornerRadius="24dp" />
+            />
     </LinearLayout>
 
     <!-- Botão Atualizar na parte inferior -->
