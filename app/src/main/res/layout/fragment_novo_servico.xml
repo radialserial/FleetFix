@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".view.fragment.mecanico.NovoServicoFragment">
+
+
+    <EditText
+        android:id="@+id/etDescricao"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:hint="Descrição"
+        android:background="@drawable/edit_text_border"
+        android:gravity="top|start"
+        android:padding="8dp"
+        android:textColorHint="#666" />
+
+    <EditText
+        android:id="@+id/etCost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Custo"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:inputType="numberDecimal"
+        android:textColorHint="#666" />
+
+    <Button
+        android:id="@+id/btnAddService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#6a51a2"
+        android:text="Adicionar"
+        android:textColor="#fff" />
+</LinearLayout>

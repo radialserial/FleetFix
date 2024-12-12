@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    tools:context=".view.fragment.mecanico.PedidoManutencaoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Imagem do veículo -->
+        <ImageView
+            android:id="@+id/vehicleImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/veiculo_image"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Tipo e Placa do veículo -->
+        <TextView
+            android:id="@+id/vehicleTypePlate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[Tipo de veículo] [Placa do veículo]"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Motorista -->
+        <TextView
+            android:id="@+id/driverName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[Motorista]"
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Descrição do problema -->
+        <TextView
+            android:id="@+id/problemDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[Descrição do problema provida por motorista]"
+            android:textSize="14sp"
+            android:layout_marginBottom="24dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:textSize="14sp"
+                android:layout_marginEnd="16dp" />
+
+            <Spinner
+                android:id="@+id/statusSpinner"
+                android:layout_width="wrap_content"
+                android:padding="16dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Botões -->
+        <Button
+            android:id="@+id/listaServicoButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lista_de_servi_os"
+            android:drawableStart="@drawable/ic_list"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/vehicleHistoryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/historico_do_veiculo"
+            android:drawableStart="@drawable/ic_manutencao" />
+    </LinearLayout>
+</ScrollView>

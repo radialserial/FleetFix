@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FleetFix"
         tools:targetApi="31">
+
+
         <activity
             android:name=".view.activity.MecanicoActivity"
             android:exported="false" />

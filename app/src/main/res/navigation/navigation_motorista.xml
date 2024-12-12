@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_motorista.xml"
+    app:startDestination="@id/veiculosFragment">
+
+    <fragment
+        android:id="@+id/veiculosFragment"
+        android:name="com.hinade.fleetfix.view.fragment.motorista.VeiculosFragment"
+        android:label="fragment_veiculos"
+        tools:layout="@layout/fragment_veiculos">
+        <action
+            android:id="@+id/action_veiculosFragment_to_adicionarVeiculoFragment"
+            app:destination="@id/adicionarVeiculoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/solicitarManutencaoFragment"
+        android:name="com.hinade.fleetfix.view.fragment.motorista.SolicitarManutencaoFragment"
+        android:label="fragment_solicitar_manutencao"
+        tools:layout="@layout/fragment_solicitar_manutencao">
+        <action
+            android:id="@+id/action_solicitarManutencaoFragment_to_manutencaoFragment"
+            app:destination="@id/manutencoesFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/manutencoesFragment"
+        android:name="com.hinade.fleetfix.view.fragment.motorista.ManutencoesFragment"
+        android:label="fragment_manutencao_motorista"
+        tools:layout="@layout/fragment_manutencoes_motorista">
+        <action
+            android:id="@+id/action_manutencaoFragment_to_solicitarManutencaoFragment"
+            app:destination="@id/solicitarManutencaoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/multasFragment"
+        android:name="com.hinade.fleetfix.view.fragment.motorista.MultasFragment"
+        android:label="fragment_multas"
+        tools:layout="@layout/fragment_multas">
+        <action
+            android:id="@+id/action_multasFragment_to_adicionarMultaFragment"
+            app:destination="@id/adicionarMultaFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/adicionarMultaFragment"
+        android:name="com.hinade.fleetfix.view.fragment.motorista.AdicionarMultaFragment"
+        android:label="fragment_adicionar_multa"
+        tools:layout="@layout/fragment_adicionar_multa">
+        <action
+            android:id="@+id/action_adicionarMultaFragment_to_multasFragment"
+            app:destination="@id/multasFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/adicionarVeiculoFragment"
+        android:name="com.hinade.fleetfix.view.fragment.motorista.AdicionarVeiculoFragment"
+        android:label="fragment_adicionar_veiculo"
+        tools:layout="@layout/fragment_adicionar_veiculo">
+        <action
+            android:id="@+id/action_adicionarVeiculoFragment_to_veiculosFragment"
+            app:destination="@id/veiculosFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+</navigation>
